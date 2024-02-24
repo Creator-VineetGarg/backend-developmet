@@ -1,7 +1,3 @@
-Certainly! Here's a README.md file tailored for your GitHub repository focused on backend development learnings with JavaScript, Node.js, MongoDB, and Express:
-
----
-
 # Backend Development Learnings
 
 This repository contains my learnings and practice projects related to backend development using JavaScript, Node.js, MongoDB, and Express.
@@ -25,7 +21,7 @@ To explore the projects and exercises in this repository, follow these steps:
 1. Clone the repository to your local machine:
 
    ```
-   git clone https://github.com/your-username/backend-development-learnings.git
+   git clone https://github.com/VineetGargOfficials/backend-development.git
    ```
 
 2. Navigate to the project directory:
