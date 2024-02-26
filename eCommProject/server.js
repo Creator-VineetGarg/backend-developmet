@@ -61,12 +61,12 @@ async function init(){
     }
 }
 
+
 /**
- * Stichh the route to the server
+ * Stich the route to the server
  */
 
-require('./Router/auth.route')(app)
-
+require("./Router/auth.route")(app)
 
 /**
  * Start the server
