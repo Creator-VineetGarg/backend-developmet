@@ -3,7 +3,9 @@
  */
 const express = require("express")
 const mongoose = require("mongoose")
+
 const app = express()
+
 const server_config = require("./Configs/server.config")
 const db_config  = require("./Configs/db.config")
 const user_model = require("./Models/user.model")

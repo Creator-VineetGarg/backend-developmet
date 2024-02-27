@@ -4,7 +4,7 @@
 
 const bcrypt = require('bcryptjs')
 const user_model = require("../Models/user.model")
-exports.signup = async (req, res)=>{
+exports.signup = async (req, res) => {
     /**
      * Logic to create the user
      */
@@ -14,31 +14,31 @@ exports.signup = async (req, res)=>{
 
     // 2. Insert the data in the User collection in MongoDB
     const userObj = {
-        name : request_body.name,
-        userId : request_body.userId,
-        email : request_body.email,
-        userType : request_body.userType,
-        password : bcrypt.hashSync(request_body.password, 8)
+        name: request_body.name,
+        userId: request_body.userId,
+        email: request_body.email,
+        userType: request_body.userType,
+        password: bcrypt.hashSync(request_body.password, 8)
 
     }
 
     try {
-        const user_created =  await user_model.create(userObj)
+        const user_created = await user_model.create(userObj)
 
         const req_obj = {
-            name :user_created.name,
-            userId : user_created.userId,
-            userType : user_created.userType,
-            email : user_created.email
+            name: user_created.name,
+            userId: user_created.userId,
+            userType: user_created.userType,
+            email: user_created.email
 
         }
 
         res.status(201).send(req_obj)
     }
-    catch(err){
+    catch (err) {
         console.log("Error")
         res.status(500).send({
-            message : "Some error occured while registering the user."
+            message: "Some error occured while registering the user."
         })
 
     }
