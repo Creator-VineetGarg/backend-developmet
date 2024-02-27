@@ -8,31 +8,31 @@ const mongoose = require('mongoose');
  * userType
  */
 const userSchema = new mongoose.Schema({
-    name : {
-        type : String,
-        required : true
+    name: {
+        type: String,
+        required: true
     },
-    userId : {
-        type : String,
-        required : true,
-        unique : true
+    userId: {
+        type: String,
+        required: true,
+        unique: true
     },
-    password : {
-        type : String,
-        required : true
-    }, 
-    email : {
-        type : String,
-        required : true,
-        minLength  : 10,
-        lowercase : true,
-        unique : true
+    password: {
+        type: String,
+        required: true
     },
-    userType : {
-        type : String,
-        default : "CUSTOMER",
-        enum : ["CUSTOMER", "ADMIN"]
+    email: {
+        type: String,
+        required: true,
+        minLength: 10,
+        lowercase: true,
+        unique: true
+    },
+    userType: {
+        type: String,
+        default: "CUSTOMER",
+        enum: ["CUSTOMER", "ADMIN"]
     }
-}, {timestamps : true, versionKey : false})
+}, { timestamps: true, versionKey: false })
 
 module.exports = mongoose.model("User", userSchema)
