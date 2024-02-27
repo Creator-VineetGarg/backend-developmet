@@ -1,0 +1,31 @@
+1. NodeJS Project 
+
+2.  Register a User 
+For that we have to add some dependencies
+- express
+- mongoose
+- bcryptjs
+- jsonwebtoken
+
+3. Create Model 
+- user.model.js
+
+4. Creating a Admin User
+--> server.js 
+    --> start server 
+    --> Connect to MongoDB
+    --> Admin User
+
+5. API to register the user
+    --> Controller
+        --> Read the request body
+        --> Insert the data in the MongoDB
+        --> Return the response
+    --> Route
+        --> If to app gets POST request then authController.signup get calls
+
+--> Brought the route to the server and give the app object
+
+// Now all things are connceted
+
+--> To convert the json file into js object we use Middle Ware
