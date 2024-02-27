@@ -29,3 +29,9 @@ For that we have to add some dependencies
 // Now all things are connceted
 
 --> To convert the json file into js object we use Middle Ware
+
+
+
+// Flow of Program Till Now
+Server --> Route --> Controller --> Model --> Database
+Database --> Model --> Controller --> Route --> Server
