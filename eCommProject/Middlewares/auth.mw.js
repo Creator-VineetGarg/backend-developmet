@@ -71,6 +71,7 @@ const verifySigninBody = async (req, res, next) => {
             message : "Password is not provided"
         })
     }
+    next()
 }
 
 const verifyToken  = (req, res, next)=>{
@@ -98,13 +99,10 @@ verifyToken
         }
         next()
     })
-
-    
-
     // Then 
 }
 module.exports = {
     verifySignupBody: verifySignupBody,
     verifySigninBody : verifySigninBody,
-    verifyToken : verifyToken
+    // verifyToken : verifyToken
 }
